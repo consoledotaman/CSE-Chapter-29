@@ -84,7 +84,7 @@ function Login({refresh}) {
         let id = user.email.slice(0, 7).toUpperCase();
         year = "20" + (Number(id.slice(2, 4)) + 4);
 
-        const result = await axios.get(`https://cse-chapter-28-server.vercel.app/api/${year}/id?id=${id}`);
+        const result = await axios.get(`https://cse-chapter-29-server.vercel.app/api/${year}/id?id=${id}`);
         const dt = result.data;
         
         if (dt && dt.length > 0) {
@@ -143,7 +143,7 @@ function Login({refresh}) {
     form.append("linkedin",LinkedIn);
     form.append("id",data[0].id);
 
-    await axios.post(`https://cse-chapter-28-server.vercel.app/api/${year}/profile`,
+    await axios.post(`https://cse-chapter-29-server.vercel.app/api/${year}/profile`,
       form,{
         headers:{
           'Content-Type':'multipart/form-data'

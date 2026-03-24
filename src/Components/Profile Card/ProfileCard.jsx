@@ -22,7 +22,7 @@ function ProfileCard({year}) {
     let ApiCaller = async () => {
       LoadState(false);
       response = await axios.get(
-        "https://cse-chapter-28-server.vercel.app/api/"+year
+        "https://cse-chapter-29-server.vercel.app/api/"+year
       );
       setData(response.data);
       console.log(response.data);
